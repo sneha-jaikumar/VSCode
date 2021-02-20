@@ -4,8 +4,6 @@ import sys
 from typing import List, Dict
 from csv import DictReader
 
-__author__ = "730395204"
-
 NUM_ARGS: int = 4
 FILE_INDEX: int = 1
 COLUMN_INDEX: int = 2
@@ -27,7 +25,7 @@ def main() -> None:
 def read_args() -> Dict[str, str]:
     """Checks for a valid operation."""
     if len(sys.argv) != NUM_ARGS:
-        print("Usage: python -m projects.pj01.weather [FILE] [COLUMN] [OPERATION]")
+        print("Usage: python -m NCWIT.weather_NCWIT [FILE] [COLUMN] [OPERATION]")
         exit() 
     if sys.argv[OPERATION_INDEX] not in VALID_OPERATIONS:
         print("Invalid operation: " + sys.argv[OPERATION_INDEX])
@@ -182,8 +180,6 @@ def search_file(file: str, column_name: str, operation: str) -> None:
         chart_data(list(file, column_name, SOD_rows), column_name, dates)
     else:
         print(noDupes(dupes(list(file, column_name, SOD_rows))))
-        
-
 
 
 if __name__ == "__main__":
